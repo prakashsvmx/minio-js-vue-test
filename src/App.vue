@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { getBuckets } from './utils/mc'
-
-getBuckets()
+import MinIOBuckets from './components/MinIOBuckets.vue'
 </script>
 
 <template>
@@ -12,7 +10,7 @@ getBuckets()
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
+      <MinIOBuckets />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>

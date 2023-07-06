@@ -1,18 +1,17 @@
 import * as minio from 'minio'
 const mc = new minio.Client(
-  /*{
-    endPoint: "play.min.io",
-    port: 9000,
+  {
+    endPoint: 'play.min.io',
     useSSL: true,
-    accessKey: "Q3AM3UQ867SPQQA43P2F",
-    secretKey: "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG"
-}*/ {
+    accessKey: 'Q3AM3UQ867SPQQA43P2F',
+    secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+  } /* {
     endPoint: 'localhost',
     useSSL: false,
     port: 22000,
     accessKey: 'minio',
     secretKey: 'minio123'
-  }
+  }*/
   /* {
        endPoint:"localhost",
        useSSL: false,
@@ -38,7 +37,8 @@ const mc = new minio.Client(
 
 export const getBuckets = async () => {
   const res = await mc.listBuckets()
-  console.log(res)
+    console.log("Calledd", res.length)
+return res
 }
 
 export default mc
